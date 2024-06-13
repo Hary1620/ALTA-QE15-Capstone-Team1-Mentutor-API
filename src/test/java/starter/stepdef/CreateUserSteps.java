@@ -1,5 +1,6 @@
 package starter.stepdef;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
@@ -24,4 +25,6 @@ public class CreateUserSteps {
     public void sendRequestPostCreateUser() {
         SerenityRest.when().post(ReqresAPI.CREATE_USER);
     }
+
+
 }
