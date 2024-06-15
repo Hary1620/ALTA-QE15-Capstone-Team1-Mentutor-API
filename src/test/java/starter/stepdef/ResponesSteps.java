@@ -34,4 +34,13 @@ public class ResponesSteps {
         File jsonFile = new File(Constants.JSON_SCHEMA+fileName);
         SerenityRest.and().body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
     }
+
+
+//    @And("Response body id should be {id} and token should be {string}")
+//    public void responseBodyIdShouldBeIdAndTokenShouldBe(int id,String token) {
+//        SerenityRest.and()
+//                .body(ReqresResponses.ID, equalTo(id))
+//                .body(ReqresResponses.TOKEN, equalTo(token));
+//    }
+
 }
