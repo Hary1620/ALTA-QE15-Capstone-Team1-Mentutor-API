@@ -1,3 +1,4 @@
+@tugas
 Feature: Create new user API
   Scenario Outline: Create new user with valid json
     Given Create new user with valid json "<fileName>"

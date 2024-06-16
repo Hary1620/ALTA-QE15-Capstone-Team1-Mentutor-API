@@ -23,4 +23,9 @@ public class UpdateUserSteps {
     public void sendRequestPutUpdateUser() {
         SerenityRest.when().put(ReqresAPI.USER_WITH_ID);
     }
+
+    @When("Send request patch update user")
+    public void sendRequestPatchUpdateUser() {
+        SerenityRest.when().patch(ReqresAPI.USER_WITH_ID);
+    }
 }

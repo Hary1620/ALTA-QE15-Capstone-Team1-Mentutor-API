@@ -41,6 +41,11 @@ public class ReqresAPI {
         SerenityRest.given().pathParam("idUser",id);
     }
 
+    @Step ("Get single user specialcharacter")
+    public void getSpecialSingleUser(String id){
+        SerenityRest.given().pathParam("idUser",id);
+    }
+
 
 
     @Step ("Create new user")
@@ -56,6 +61,11 @@ public class ReqresAPI {
 
     @Step ("Delete a user")
     public void DeleteUser(int id){
+        SerenityRest.given().pathParam("idUser",id);
+    }
+
+    @Step("Delete a user with string id")
+    public void DeleteUserString(String id){
         SerenityRest.given().pathParam("idUser",id);
     }
 

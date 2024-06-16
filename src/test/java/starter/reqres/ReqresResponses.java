@@ -6,5 +6,7 @@ public class ReqresResponses {
     public static String JOB =  "job";
     public static String TOKEN = "token";
     public static String ID = "data.id";
+    public static String ERROR = "error";
+
 
 }

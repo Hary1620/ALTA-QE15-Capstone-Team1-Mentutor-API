@@ -35,4 +35,20 @@ public class SingleUserSteps {
 //                .body(ReqresResponses.ID, equalTo(id))
 //        );
     }
+
+    @Given("Get single user with unknown id {int}")
+    public void getSingleUserWithUnknownIdId(int id) {
+        reqresAPI.getSingleUser(id);
+    }
+
+    @Given("Get single user with invalid id {string}")
+    public void getSingleUserWithInvalidId(String SpecialChara) {
+        reqresAPI.getSpecialSingleUser(SpecialChara);
+    }
+
+    @And("Response body json should be {string}")
+    public void responseBodyJsonShouldBe(String error) {
+        SerenityRest.then().body(equalTo(error));
+
+    }
 }
