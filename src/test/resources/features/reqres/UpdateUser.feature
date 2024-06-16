@@ -1,5 +1,6 @@
+@tugas
 Feature: Update user API
-  Scenario: Update user with valid parameter id and valid json
+  Scenario: Put update user with valid parameter id and valid json
     Given Update user with parameter id 2 and valid json "update_user.json"
     When Send request put update user
     Then Status code should be 200
@@ -7,7 +8,7 @@ Feature: Update user API
     And validate json schema "Update_users_json_schema.json"
 
 
-    Scenario: Update user with valid parameter id and valid json
+    Scenario: Patch update user with valid parameter id and valid json
       Given Update user with parameter id 3 and valid json "update_user.json"
       When Send request patch update user
       Then Status code should be 200

@@ -47,8 +47,8 @@ public class SingleUserSteps {
     }
 
     @And("Response body json should be {string}")
-    public void responseBodyJsonShouldBe(String error) {
-        SerenityRest.then().body(equalTo(error));
+    public void responseBodyJsonShouldBe(String nul) {
+        SerenityRest.and().body(equalTo(nul));
 
     }
 }

@@ -17,6 +17,7 @@ Feature: Get Single User API
       When Send request get single user
       Then Status code should be 404
       And Response body json should be "{}"
+     And validate json schema "single_invalidusers_json_schema.json"
 
      Examples:
      |id|
@@ -28,3 +29,4 @@ Feature: Get Single User API
        When Send request get single user
        Then Status code should be 404
        And Response body json should be "{}"
+       And validate json schema "single_invalidusers_json_schema.json"

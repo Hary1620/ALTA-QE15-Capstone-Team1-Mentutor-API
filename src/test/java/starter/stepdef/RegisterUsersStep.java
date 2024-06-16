@@ -56,4 +56,10 @@ public class RegisterUsersStep {
         Serenity.setSessionVariable("token").to(token);
 
     }
+
+    @Given("Register new user with invalid json {string}")
+    public void registerNewUserWithInvalidJson(String FileName) {
+        File fileJson = new File(Constants.REQ_BODY+FileName);
+        reqresAPI.postRegisterNewUser(fileJson);
+    }
 }

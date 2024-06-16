@@ -11,3 +11,5 @@ Feature: Create new user API
     |fileName | name | job |
     |create_user1.json|Hary Indra 1 | QA Engineer 1 |
     |create_user2.json|Hary Indra 2 | QA Engineer 2|
+
+

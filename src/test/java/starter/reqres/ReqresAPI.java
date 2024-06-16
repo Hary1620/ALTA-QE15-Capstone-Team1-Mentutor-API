@@ -19,6 +19,8 @@ public class ReqresAPI {
 
     public static String LOGIN_USERS = Constants.BASE_URL+ "/api/login";
 
+    public static String DELAYED_RESPONSE = Constants.BASE_URL+ "/api/users?delay={int}";
+
 
     @Step ("Register new user")
     public void postRegisterNewUser(File json) {
@@ -44,6 +46,11 @@ public class ReqresAPI {
     @Step ("Get single user specialcharacter")
     public void getSpecialSingleUser(String id){
         SerenityRest.given().pathParam("idUser",id);
+    }
+
+    @Step ("Get Delayed response of users")
+    public void getDelayedUser(int time){
+        SerenityRest.given().pathParam("int",time);
     }
 
 
