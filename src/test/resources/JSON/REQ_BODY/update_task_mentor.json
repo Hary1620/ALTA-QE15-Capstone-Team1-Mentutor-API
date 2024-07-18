@@ -1,7 +1,7 @@
 {
-  "judul": "pembagian",
-  "deskripsi": "tentukan soal pembagian berikut",
-  "gambar": "contoh.jpg",
+  "title": "pembagian",
+  "description": "tentukan soal pembagian berikut",
+  "images": "contoh.jpg",
   "file": "soal.pdf",
-  "tanggal": "2024-07-25"
+  "due_date": "2024-07-25"
 }

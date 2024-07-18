@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import starter.reqres.MentutorAPI;
+import starter.mentutor.MentutorAPI;
 import starter.utils.Constants;
 
 import java.io.File;
@@ -15,7 +15,7 @@ public class UpdateTaskStepdef {
 
     @Given("Update task by mentor with valid id {int} & data {string}")
     public void updateTaskByMentorWithValidIdData(int id_task, String file) {
-        File jsonFile = new File(Constants.JSON_SCHEMA + file);
+        File jsonFile = new File(Constants.REQ_BODY + file);
         mentutorAPI.updateTask(id_task, jsonFile);
     }
 

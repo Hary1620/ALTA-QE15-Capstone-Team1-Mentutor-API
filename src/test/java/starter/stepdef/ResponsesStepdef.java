@@ -4,12 +4,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import starter.reqres.MentutorAPI;
+import starter.mentutor.MentutorAPI;
 import starter.utils.Constants;
 
 import java.io.File;
-
-import static org.hamcrest.Matchers.equalTo;
 
 public class ResponsesStepdef {
     @Steps

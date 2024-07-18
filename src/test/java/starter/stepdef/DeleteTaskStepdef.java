@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import starter.reqres.MentutorAPI;
+import starter.mentutor.MentutorAPI;
 
 public class DeleteTaskStepdef {
     @Steps
