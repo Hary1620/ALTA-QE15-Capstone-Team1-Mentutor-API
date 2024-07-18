@@ -20,7 +20,6 @@ public class MentorAPI {
     public static String DELETE_TASK = Constants.BASE_URL+ "/mentors/tasks/{id_task}";
     public static String POST_SCORE = Constants.BASE_URL+ "/mentors/submission/{id_submission}";
     public static String POST_COMMENT = Constants.BASE_URL+ "/forum/{id_status}";
-
     public static String TOKEN = getToken();
 
     public static String getToken(){
