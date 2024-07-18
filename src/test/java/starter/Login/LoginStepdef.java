@@ -17,9 +17,23 @@ import static org.hamcrest.Matchers.equalTo;
 public class LoginStepdef {
     @Steps
     MentorAPI mentorAPI;
+    AdminAPI adminAPI;
+    MenteeAPI menteeAPI;
 
     @Given("Login mentor with valid account {string}")
     public void loginMentorWithValidAccount(String file) {
+        File jsonFile = new File(Constants.REQ_BODY + file);
+        mentorAPI.loginMentor(jsonFile);
+    }
+
+    @Given("Login admin with valid account {string}")
+    public void loginAdminWithValidAccount(String file) {
+        File jsonFile = new File(Constants.REQ_BODY + file);
+        mentorAPI.loginAdmin(jsonFile);
+    }
+
+    @Given("Login mentee with valid account {string}")
+    public void loginMenteeWithValidAccount(String file) {
         File jsonFile = new File(Constants.REQ_BODY + file);
         mentorAPI.loginMentor(jsonFile);
 
@@ -31,6 +45,14 @@ public class LoginStepdef {
         JsonPath jsonPath = response.jsonPath();
         String TOKEN = jsonPath.get("data.token");
         System.out.println(TOKEN);
+        MentorAPI.TOKEN = TOKEN;
+    }
+
+    @When("Send request login admin")
+    public void sendRequestLoginAdmin() {
+        Response response = SerenityRest.when().post(MentorAPI.LOGIN_ADMIN);
+        JsonPath jsonPath = response.jsonPath();
+        String TOKEN = jsonPath.get("data.token");
         MentorAPI.TOKEN = TOKEN;
     }
 
