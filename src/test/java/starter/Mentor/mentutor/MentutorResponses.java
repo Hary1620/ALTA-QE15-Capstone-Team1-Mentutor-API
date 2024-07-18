@@ -1,4 +1,4 @@
-package starter.mentutor;
+package starter.Mentor.mentutor;
 
 public class MentutorResponses {
     public static String NAME = "name";
