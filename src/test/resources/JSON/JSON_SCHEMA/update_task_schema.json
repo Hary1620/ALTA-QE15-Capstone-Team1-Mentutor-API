@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id_task": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "images": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "due_date": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id_task",
+        "title",
+        "description",
+        "images",
+        "file",
+        "due_date"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}
