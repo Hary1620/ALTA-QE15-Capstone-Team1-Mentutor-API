@@ -6,11 +6,13 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import starter.Login.LoginAPI;
 import starter.utils.Constants;
 
 import java.io.File;
 
 public class MentorAPI {
+
     public static String UPDATE_USERS = Constants.BASE_URL+ "/user";
     public static String ADD_TASK = Constants.BASE_URL+ "/mentors/tasks";
     public static String GET_ALL_TASK = Constants.BASE_URL+ "/mentors/tasks";
@@ -24,7 +26,7 @@ public class MentorAPI {
     @Step ("Get all task")
     public void getAllTask(){
         SerenityRest.given()
-                .header("Authorization", "Bearer " + TOKEN);
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 
     @Step ("Update user")
@@ -32,7 +34,7 @@ public class MentorAPI {
         SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + TOKEN);
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 
     @Step ("Add task")
@@ -40,14 +42,18 @@ public class MentorAPI {
         SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + TOKEN);
+
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+
     }
 
     @Step ("Get detail task")
     public void getDetailTask(int id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
-                .header("Authorization", "Bearer " + TOKEN);
+
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+
     }
 
     @Step ("Update task")
@@ -56,14 +62,14 @@ public class MentorAPI {
                 .pathParam("id_task", id_task)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + TOKEN);
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 
     @Step ("Delete a task")
     public void deleteTask(int id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
-                .header("Authorization", "Bearer " + TOKEN);
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 
     @Step ("Submit Score")
@@ -72,7 +78,8 @@ public class MentorAPI {
                 .pathParam("id_submission", id_submission)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + TOKEN);
+
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 
     @Step ("Comment Status")
@@ -81,7 +88,7 @@ public class MentorAPI {
                 .pathParam("id_status", id_status)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + TOKEN);
+                .header("Authorization", "Bearer" + LoginAPI.getTokenMentor());
     }
 
     @Step ("Login mentor")
