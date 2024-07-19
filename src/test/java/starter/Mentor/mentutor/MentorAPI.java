@@ -12,7 +12,7 @@ import java.io.File;
 
 public class MentorAPI {
     public static String LOGIN_MENTOR = Constants.BASE_URL +"/login";
-    public static String UPDATE_USERS = Constants.BASE_URL+ "/user";
+    public static String UPDATE_USERS = Constants.BASE_URL+ "/users";
     public static String ADD_TASK = Constants.BASE_URL+ "/mentors/tasks";
     public static String GET_ALL_TASK = Constants.BASE_URL+ "/mentors/tasks";
     public static String GET_DETAIL_TASK = Constants.BASE_URL+ "/mentors/tasks/{id_task}";
@@ -21,16 +21,7 @@ public class MentorAPI {
     public static String POST_SCORE = Constants.BASE_URL+ "/mentors/submission/{id_submission}";
     public static String POST_COMMENT = Constants.BASE_URL+ "/forum/{id_status}";
 
-    public static String TOKEN = getToken();
-
-    public static String getToken(){
-        File jsonFile = new File(Constants.REQ_BODY + "login_mentor.json");
-        loginMentor(jsonFile);
-        Response response = SerenityRest.when().post(MentorAPI.LOGIN_MENTOR);
-        JsonPath jsonPath = response.jsonPath();
-        System.out.println(jsonPath.get("data.token").toString());
-        return jsonPath.get("data.token");
-    }
+    public static String TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEzNzQxMDYsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.opRJzA3w63XRYaTKJwQlwNgXtLknfPynZpJCBhuIDL4";
 
     @Step ("Get all task")
     public void getAllTask(){
@@ -39,26 +30,31 @@ public class MentorAPI {
     }
 
     @Step ("Update user")
-    public void updateUser(File json){
+    public void updateUser(String name, String email, String password, String imageFile){
         SerenityRest.given()
-                .contentType(ContentType.JSON)
-                .body(json)
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEyOTI1NzcsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.7EyDBtr_6g07Q20BTiirDH-ZqgMvNR_5AoCMdUW-qVM");
+                .multiPart("name", name)
+                .multiPart("email", email)
+                .multiPart("password", password)
+                .multiPart("images", new File(Constants.DIR + "/src/docs/" + imageFile))
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
     @Step ("Add task")
-    public void addTask(File json){
+    public void addTask(String title, String description, String images, String file, String date){
         SerenityRest.given()
-                .contentType(ContentType.JSON)
-                .body(json)
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEyOTI1NzcsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.7EyDBtr_6g07Q20BTiirDH-ZqgMvNR_5AoCMdUW-qVM");
+                .multiPart("title", title)
+                .multiPart("description", description)
+                .multiPart("images", new File(Constants.DIR + "/src/docs/" + images))
+                .multiPart("file", new File(Constants.DIR + "/src/docs/" + file))
+                .multiPart("due date", date)
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
     @Step ("Get detail task")
     public void getDetailTask(int id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEyOTI1NzcsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.7EyDBtr_6g07Q20BTiirDH-ZqgMvNR_5AoCMdUW-qVM");
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
     @Step ("Update task")
@@ -67,14 +63,21 @@ public class MentorAPI {
                 .pathParam("id_task", id_task)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEyOTI1NzcsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.7EyDBtr_6g07Q20BTiirDH-ZqgMvNR_5AoCMdUW-qVM");
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
     @Step ("Delete a task")
     public void deleteTask(int id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEyOTI1NzcsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.7EyDBtr_6g07Q20BTiirDH-ZqgMvNR_5AoCMdUW-qVM");
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+
+    @Step ("Delete a task invalid string")
+    public void deleteTaskInvalid(String id_task){
+        SerenityRest.given()
+                .pathParam("id_task", id_task)
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
     @Step ("Submit Score")
@@ -83,7 +86,15 @@ public class MentorAPI {
                 .pathParam("id_submission", id_submission)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEyOTI1NzcsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.7EyDBtr_6g07Q20BTiirDH-ZqgMvNR_5AoCMdUW-qVM");
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+    @Step ("Submit Score invalid string")
+    public void submitScoreInvalid (String id_submission, File json){
+        SerenityRest.given()
+                .pathParam("id_submission", id_submission)
+                .contentType(ContentType.JSON)
+                .body(json)
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
     @Step ("Comment Status")
@@ -92,11 +103,20 @@ public class MentorAPI {
                 .pathParam("id_status", id_status)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer ");
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
-    @Step ("Login mentor")
-    public static void loginMentor(File json){
+    @Step ("Comment Status")
+    public void commentStatusInvalid(String id_status, File json){
+        SerenityRest.given()
+                .pathParam("id_status", id_status)
+                .contentType(ContentType.JSON)
+                .body(json)
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+
+    @Step ("validate json schema")
+    public void loginMentor(File json){
         SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(json);

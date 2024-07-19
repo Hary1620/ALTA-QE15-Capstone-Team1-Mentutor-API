@@ -15,7 +15,7 @@ public class AddCommentsStepdef {
 
     @Given("Add comment on forum with valid id {int} status & valid data {string}")
     public void addCommentOnForumWithValidIdStatusValidData(int id_status, String file) {
-        File jsonFile = new File(Constants.JSON_SCHEMA + file);
+        File jsonFile = new File(Constants.REQ_BODY + file);
         mentorAPI.commentStatus(id_status, jsonFile);
     }
 
@@ -25,14 +25,20 @@ public class AddCommentsStepdef {
     }
 
     @Given("Add comment on forum with not exist id {int} status & valid data {string}")
-    public void addCommentOnForumWithNotExistIdStatusValidData(int arg0, String arg1) {
+    public void addCommentOnForumWithNotExistIdStatusValidData(int id_status, String file) {
+        File jsonFile = new File(Constants.REQ_BODY + file);
+        mentorAPI.commentStatus(id_status, jsonFile);
     }
 
     @Given("Add comment on forum with invalid id {string} status & valid data {string}")
-    public void addCommentOnForumWithInvalidIdStatusValidData(String arg0, String arg1) {
+    public void addCommentOnForumWithInvalidIdStatusValidData(String id_status, String file) {
+        File jsonFile = new File(Constants.REQ_BODY + file);
+        mentorAPI.commentStatusInvalid(id_status, jsonFile);
     }
 
     @Given("Add comment on forum with valid id {int} status & invalid data {string}")
-    public void addCommentOnForumWithValidIdStatusInvalidData(int arg0, String arg1) {
+    public void addCommentOnForumWithValidIdStatusInvalidData(int id_status, String file) {
+        File jsonFile = new File(Constants.REQ_BODY + file);
+        mentorAPI.commentStatus(id_status, jsonFile);
     }
 }

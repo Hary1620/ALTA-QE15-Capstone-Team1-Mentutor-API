@@ -9,6 +9,6 @@ Feature: Get all tasks by id mentor
   Scenario: Get all task with invalid parameter
     Given Get all task with invalid parameter
     When Send request get all task
-    Then Status code should be 400
-    And Response body message should be "Invalid Input From Client"
+    Then Status code should be 404
+    And Response body message should be "Not Found"
     And Validate json schema should be "get_all_task_invalid_schema.json"

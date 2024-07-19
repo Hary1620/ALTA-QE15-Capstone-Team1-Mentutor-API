@@ -25,7 +25,9 @@ public class UpdateTaskStepdef {
     }
 
     @Given("Update task by mentor with not exist id {int} & data {string}")
-    public void updateTaskByMentorWithNotExistIdData(int arg0, String arg1) {
+    public void updateTaskByMentorWithNotExistIdData(int id_task, String file) {
+        File jsonFile = new File(Constants.REQ_BODY + file);
+        mentorAPI.updateTask(id_task, jsonFile);
     }
 
     @Given("Update task by mentor with invalid id {int} & data {string}")
