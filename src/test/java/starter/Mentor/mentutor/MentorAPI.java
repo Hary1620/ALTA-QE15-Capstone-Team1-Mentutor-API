@@ -12,7 +12,7 @@ import starter.utils.Constants;
 import java.io.File;
 
 public class MentorAPI {
-    
+
     public static String UPDATE_USERS = Constants.BASE_URL+ "/user";
     public static String ADD_TASK = Constants.BASE_URL+ "/mentors/tasks";
     public static String GET_ALL_TASK = Constants.BASE_URL+ "/mentors/tasks";
@@ -22,6 +22,7 @@ public class MentorAPI {
     public static String POST_SCORE = Constants.BASE_URL+ "/mentors/submission/{id_submission}";
     public static String POST_COMMENT = Constants.BASE_URL+ "/forum/{id_status}";
     
+
     @Step ("Get all task")
     public void getAllTask(){
         SerenityRest.given()
@@ -41,14 +42,18 @@ public class MentorAPI {
         SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(json)
+
                 .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+
     }
 
     @Step ("Get detail task")
     public void getDetailTask(int id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
+
                 .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+
     }
 
     @Step ("Update task")
@@ -73,6 +78,7 @@ public class MentorAPI {
                 .pathParam("id_submission", id_submission)
                 .contentType(ContentType.JSON)
                 .body(json)
+
                 .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 
