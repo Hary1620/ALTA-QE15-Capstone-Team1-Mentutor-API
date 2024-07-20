@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id_task": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "images": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "due_date": {
+          "type": "string"
+        },
+        "submission": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id_submission": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "integer"
+                },
+                "file": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id_submission",
+                "name",
+                "score",
+                "file"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id_task",
+        "title",
+        "description",
+        "images",
+        "file",
+        "due_date",
+        "submission"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}
