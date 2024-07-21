@@ -14,8 +14,8 @@ public class UpdateProfileStepdef {
     MentorAPI mentorAPI;
 
     @Given("Update profile with valid data {string}")
-    public void updateProfileWithValidData(String file) {
-        File jsonFile = new File(Constants.JSON_SCHEMA + file);
+    public void updateProfileWithValidData(String jsonFileName) {
+        File jsonFile = new File(Constants.JSON_SCHEMA + jsonFileName);
         mentorAPI.updateUser(jsonFile);
     }
 
