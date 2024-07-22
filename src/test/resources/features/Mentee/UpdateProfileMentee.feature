@@ -7,7 +7,7 @@ Feature: Update profile mentee
     And Validate json schema should be "update_profile_mentee_schema.json"
 
 #  negative case
-  Scenario: Update profile with empty required password
+  Scenario: Update profile with invalid data type
     Given Update profile mentee with valid data "update_profile_mentee_invalid.json"
     When Send request update profile mentee
     Then Status code should be 400
