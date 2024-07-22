@@ -21,7 +21,7 @@ public class MentorAPI {
     public static String POST_SCORE = Constants.BASE_URL+ "/mentors/submission/{id_submission}";
     public static String POST_COMMENT = Constants.BASE_URL+ "/forum/{id_status}";
 
-    public static String TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjEzNzQxMDYsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.opRJzA3w63XRYaTKJwQlwNgXtLknfPynZpJCBhuIDL4";
+    public static String TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjE2NjI2MzQsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.AOtWlwQioZ13dDIlg_c06OS6ACBQcEh8OboolYFG2UE";
 
     @Step ("Get all task")
     public void getAllTask(){
@@ -36,6 +36,29 @@ public class MentorAPI {
                 .multiPart("email", email)
                 .multiPart("password", password)
                 .multiPart("images", new File(Constants.DIR + "/src/docs/" + imageFile))
+                .header("Content-Type", "multipart/form-data")
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+
+    @Step ("Update user invalid data type file")
+    public void updateUserInvalid(String imageFile){
+        SerenityRest.given()
+                .multiPart("name", new File(Constants.DIR + "/src/docs/" + imageFile))
+                .multiPart("email",  new File(Constants.DIR + "/src/docs/" + imageFile))
+                .multiPart("password", new File(Constants.DIR + "/src/docs/" + imageFile))
+                .multiPart("images", new File(Constants.DIR + "/src/docs/" + imageFile))
+                .header("Content-Type", "multipart/form-data")
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+
+    @Step ("Update user invalid data name")
+    public void updateUserInvalidName(String name, String email, String password, String imageFile){
+        SerenityRest.given()
+                .multiPart("nama", name)
+                .multiPart("email", email)
+                .multiPart("kata_sandi", password)
+                .multiPart("gambar", new File(Constants.DIR + "/src/docs/" + imageFile))
+                .header("Content-Type", "multipart/form-data")
                 .header("Authorization", "Bearer " + TOKEN);
     }
 
@@ -46,9 +69,33 @@ public class MentorAPI {
                 .multiPart("description", description)
                 .multiPart("images", new File(Constants.DIR + "/src/docs/" + images))
                 .multiPart("file", new File(Constants.DIR + "/src/docs/" + file))
-                .multiPart("due date", date)
+                .multiPart("due_date", date)
+                .header("Content-Type", "multipart/form-data")
                 .header("Authorization", "Bearer " + TOKEN);
     }
+    @Step ("Add task invalid data type file")
+    public void addTaskinvalid(String images){
+        SerenityRest.given()
+                .multiPart("title", new File(Constants.DIR + "/src/docs/" + images))
+                .multiPart("description", new File(Constants.DIR + "/src/docs/" + images))
+                .multiPart("images", new File(Constants.DIR + "/src/docs/" + images))
+                .multiPart("file", new File(Constants.DIR + "/src/docs/" + images))
+                .multiPart("due_date", new File(Constants.DIR + "/src/docs/" + images))
+                .header("Content-Type", "multipart/form-data")
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+    @Step ("Add task invalid data name")
+    public void addTaskinvalidName(String title, String description, String images, String file, String date){
+        SerenityRest.given()
+                .multiPart("judul", title)
+                .multiPart("deskripsi", description)
+                .multiPart("gambar", new File(Constants.DIR + "/src/docs/" + images))
+                .multiPart("file", new File(Constants.DIR + "/src/docs/" + file))
+                .multiPart("tanggal", date)
+                .header("Content-Type", "multipart/form-data")
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+
 
     @Step ("Get detail task")
     public void getDetailTask(int id_task){

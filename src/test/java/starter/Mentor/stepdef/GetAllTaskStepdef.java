@@ -21,7 +21,7 @@ public class GetAllTaskStepdef {
 
     @When("Send request get all task")
     public void sendRequestGetAllTask() {
-        SerenityRest.when().get(MentorAPI.GET_ALL_TASK + "ssd");
+        SerenityRest.when().get(MentorAPI.GET_ALL_TASK);
     }
 
     @And("Response body message should be {string}")
@@ -32,5 +32,10 @@ public class GetAllTaskStepdef {
     @Given("Get all task with invalid parameter")
     public void getAllTaskWithInvalidParameter() {
         mentorAPI.getAllTask();
+    }
+
+    @When("Send request get all task invalid")
+    public void sendRequestGetAllTaskInvalid() {
+        SerenityRest.when().get(MentorAPI.GET_ALL_TASK + "ssd");
     }
 }

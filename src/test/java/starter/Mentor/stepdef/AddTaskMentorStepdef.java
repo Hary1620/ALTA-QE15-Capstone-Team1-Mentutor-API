@@ -23,7 +23,13 @@ public class AddTaskMentorStepdef {
         SerenityRest.when().post(MentorAPI.ADD_TASK);
     }
 
-    @Given("Add task with invalid type data json {string}")
-    public void addTaskWithInvalidTypeDataJson(String arg0) {
+    @Given("Add task with invalid type data {string}")
+    public void addTaskWithInvalidTypeDataJson(String images) {
+        mentorAPI.addTaskinvalid(images);
+    }
+
+    @Given("Add task with invalid data name {string} {string} {string} {string} {string}")
+    public void addTaskWithInvalidDataName(String title, String description, String images, String file, String date) {
+        mentorAPI.addTaskinvalidName(title,description,images,file,date);
     }
 }
