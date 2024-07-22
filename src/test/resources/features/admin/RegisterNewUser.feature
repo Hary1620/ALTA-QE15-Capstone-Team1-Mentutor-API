@@ -1,4 +1,4 @@
-Feature: Register New User of mentee in Mentutor API
+Feature: Register New User  in Mentutor API
  Scenario Outline: Register New user with valid json
    Given register new user with valid json "<FileName>"
    When send request post register new user

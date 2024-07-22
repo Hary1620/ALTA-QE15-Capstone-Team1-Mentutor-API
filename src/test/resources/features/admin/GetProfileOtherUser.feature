@@ -7,3 +7,5 @@ Feature: Get Profil user on mentutor website
     Examples:
     |UserID|
     | 2   |
+    | 3   |
+    | 5   |
