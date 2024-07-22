@@ -2,7 +2,7 @@ Feature: Post status on forum by mentee
   Scenario: Post forum status
     Given Add status on forum with data "add_status_forum.json"
     When Send request add status
-    Then Status code should be 200
+    Then Status code should be 201
     And Validate json schema "add_status_schema.json"
 
   #negative test

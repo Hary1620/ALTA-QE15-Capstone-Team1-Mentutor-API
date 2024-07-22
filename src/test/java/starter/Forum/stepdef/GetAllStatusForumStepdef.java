@@ -34,7 +34,7 @@ public class GetAllStatusForumStepdef {
 
     @When("Send request add status")
     public void sendRequestAddStatus() {
-        SerenityRest.when().get(forumAPI.NEW_STATUS);
+        SerenityRest.when().post(forumAPI.NEW_STATUS);
     }
 
     @And("Validate json schema {string}")

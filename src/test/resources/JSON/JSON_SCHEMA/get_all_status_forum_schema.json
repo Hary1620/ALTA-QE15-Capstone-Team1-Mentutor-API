@@ -1,0 +1,648 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id_status": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id_status",
+            "name",
+            "images",
+            "caption",
+            "comments"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_status": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "id_status",
+            "name",
+            "images",
+            "caption",
+            "comments"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_status": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id_comment": {
+                      "type": "integer"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id_comment",
+                    "caption",
+                    "role",
+                    "name"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "id_status",
+            "name",
+            "images",
+            "caption",
+            "comments"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_status": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id_status",
+            "name",
+            "images",
+            "caption",
+            "comments"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_status": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id_status",
+            "name",
+            "images",
+            "caption",
+            "comments"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_status": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id_status",
+            "name",
+            "images",
+            "caption",
+            "comments"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_status": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id_status",
+            "name",
+            "images",
+            "caption",
+            "comments"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}
