@@ -1,0 +1,486 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_task": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "images": {
+              "type": "string"
+            },
+            "file": {
+              "type": "string"
+            },
+            "due_date": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_task",
+            "title",
+            "description",
+            "images",
+            "file",
+            "due_date",
+            "score",
+            "status"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}

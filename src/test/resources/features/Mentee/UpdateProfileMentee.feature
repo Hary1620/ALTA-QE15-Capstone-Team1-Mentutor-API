@@ -3,20 +3,11 @@ Feature: Update profile mentee
     Given Update profile mentee with valid data "update_profile_mentee.json"
     When Send request update profile mentee
     Then Status code should be 201
-    #And Response body message should be "success update profile"
-    #And Validate json schema should be "update_profile_mentor_schema.json"
+    And Response body message should be "success update profile"
+    And Validate json schema should be "update_profile_mentee_schema.json"
 
 #  negative case
-  Scenario: Update user with invalid input type data
-    Given Update profile with invalid type data "update_profile_mentor_invalid_type_data.json"
-    When Send request update profile mentor
+  Scenario: Update profile with empty required password
+    Given Update profile mentee with valid data "update_profile_mentee_invalid.json"
+    When Send request update profile mentee
     Then Status code should be 400
-    And Response body message should be "Invalid Input From Client"
-    And Validate json schema should be "update_profile_mentor_schema_invalid.json"
-
-  Scenario: Update user with invalid input data
-    Given Update profile with invalid input data "update_profile_mentor_invalid_data.json"
-    When Send request update profile mentor
-    Then Status code should be 400
-    And Response body message should be "Invalid Input From Client"
-    And Validate json schema should be "update_profile_mentor_schema_invalid.json"

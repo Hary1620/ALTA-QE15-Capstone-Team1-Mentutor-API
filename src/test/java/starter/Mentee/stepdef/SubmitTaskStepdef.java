@@ -1,7 +1,9 @@
 package starter.Mentee.stepdef;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
@@ -26,4 +28,9 @@ public class SubmitTaskStepdef {
         SerenityRest.when().post(MenteeAPI.POST_SCORE);
     }
 
+    @And("Validate json schema {string}")
+    public void validateJsonSchema(String fileName) {
+        File jsonFile = new File(Constants.JSON_SCHEMA+fileName);
+        SerenityRest.and().body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
+    }
 }
