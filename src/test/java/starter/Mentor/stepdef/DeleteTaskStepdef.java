@@ -21,7 +21,17 @@ public class DeleteTaskStepdef {
     }
 
     @Given("Delete task with valid id {string}")
-    public void deleteTaskWithValidId(String arg0) {
+    public void deleteTaskWithValidId(String id) {
 
+    }
+
+    @Given("Delete task with not exist id {int}")
+    public void deleteTaskWithNotExistId(int id_task) {
+        mentorAPI.deleteTask(id_task);
+    }
+
+    @Given("Delete task with invalid id {string}")
+    public void deleteTaskWithInvalidId(String id_task) {
+        mentorAPI.deleteTaskInvalid(id_task);
     }
 }

@@ -31,5 +31,11 @@ public class GetAllTaskStepdef {
 
     @Given("Get all task with invalid parameter")
     public void getAllTaskWithInvalidParameter() {
+        mentorAPI.getAllTask();
+    }
+
+    @When("Send request get all task invalid")
+    public void sendRequestGetAllTaskInvalid() {
+        SerenityRest.when().get(MentorAPI.GET_ALL_TASK + "ssd");
     }
 }

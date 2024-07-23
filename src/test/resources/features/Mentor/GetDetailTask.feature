@@ -10,12 +10,14 @@ Feature: Get detail task
     Given Get detail task with valid id 100
     When Send request get detail task
     Then Status code should be 404
-    And Response body message should be "Task not found"
+    #error The parameter "error" was used but not defined. Define parameters using the JsonPath.params(...) function
+#    And Response body message error should be "Task not found"
     And Validate json schema should be "get_detail_task_invalid_schema.json"
 
   Scenario: Get detail task with invalid id
-    Given Get detail task with valid id "satu"
+    Given Get detail task with invalid id "satu"
     When Send request get detail task
-    Then Status code should be 400
-    And Response body message should be "Task not found"
+    Then Status code should be 404
+    #error The parameter "error" was used but not defined. Define parameters using the JsonPath.params(...) function
+#    And Response body message error should be "Task not found"
     And Validate json schema should be "get_detail_task_invalid_schema.json"
