@@ -28,9 +28,9 @@ public class SubmitTaskStepdef {
         SerenityRest.when().post(MenteeAPI.POST_SCORE);
     }
 
-    @And("Validate json schema {string}")
-    public void validateJsonSchema(String fileName) {
-        File jsonFile = new File(Constants.JSON_SCHEMA+fileName);
-        SerenityRest.and().body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
-    }
+//    @And("Validate json schema {string}")
+//    public void validateJsonSchema(String fileName) {
+//        File jsonFile = new File(Constants.JSON_SCHEMA+fileName);
+//        SerenityRest.and().body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
+//    }
 }

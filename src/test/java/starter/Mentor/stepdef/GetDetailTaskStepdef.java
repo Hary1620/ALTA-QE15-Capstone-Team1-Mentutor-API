@@ -7,6 +7,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
+import starter.Login.LoginAPI;
 import starter.Mentor.mentutor.MentorAPI;
 import starter.Mentor.mentutor.MentutorResponses;
 
@@ -35,6 +36,6 @@ public class GetDetailTaskStepdef {
     public void getDetailTaskWithInvalidId(String satu) {
         SerenityRest.given()
                 .pathParam("id_task", satu)
-                .header("Authorization", "Bearer " + MentorAPI.TOKEN);
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 }

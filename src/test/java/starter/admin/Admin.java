@@ -22,7 +22,7 @@ LoginAPI loginAPI;
     @Step("Get All users")
     public void getAllUsers(){
         SerenityRest.given()
-                .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN); }
+                .header("Authorization", "Bearer " + loginAPI); }
 
     @Step("Get All Class")
     public void getAllClass(){
