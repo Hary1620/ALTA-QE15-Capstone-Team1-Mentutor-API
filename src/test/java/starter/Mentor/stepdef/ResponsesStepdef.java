@@ -20,6 +20,6 @@ public class ResponsesStepdef {
     @And("Validate json schema should be {string}")
     public void validateJsonSchemaShouldBe(String json) {
         File jsonFile = new File(Constants.JSON_SCHEMA + json);
-        mentorAPI.addTask(jsonFile);
+        mentorAPI.loginMentor(jsonFile);
     }
 }

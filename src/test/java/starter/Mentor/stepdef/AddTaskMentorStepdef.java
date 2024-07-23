@@ -13,10 +13,9 @@ public class AddTaskMentorStepdef {
     @Steps
     MentorAPI mentorAPI;
 
-    @Given("Add task with valid data json {string}")
-    public void addTaskWithValidDataJson(String file) {
-        File jsonFile = new File(Constants.JSON_SCHEMA + file);
-        mentorAPI.addTask(jsonFile);
+    @Given("Add task with valid data json {string} {string} {string} {string} {string}")
+    public void addTaskWithValidDataJson(String title, String description, String images, String file, String date) {
+        mentorAPI.addTask(title,description,images,file,date);
     }
 
     @When("Send request add task by mentor")
@@ -24,7 +23,13 @@ public class AddTaskMentorStepdef {
         SerenityRest.when().post(MentorAPI.ADD_TASK);
     }
 
-    @Given("Add task with invalid type data json {string}")
-    public void addTaskWithInvalidTypeDataJson(String arg0) {
+    @Given("Add task with invalid type data {string}")
+    public void addTaskWithInvalidTypeDataJson(String images) {
+        mentorAPI.addTaskinvalid(images);
+    }
+
+    @Given("Add task with invalid data name {string} {string} {string} {string} {string}")
+    public void addTaskWithInvalidDataName(String title, String description, String images, String file, String date) {
+        mentorAPI.addTaskinvalidName(title,description,images,file,date);
     }
 }
