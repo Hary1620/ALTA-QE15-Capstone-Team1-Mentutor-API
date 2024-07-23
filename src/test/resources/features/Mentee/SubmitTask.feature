@@ -1,6 +1,6 @@
 Feature: Post submit task
   Scenario: Submit task with valid task id and data
-    Given Submit task with valid task id 20 & valid data "submit_task.json"
+    Given Submit task with valid task id 21 & valid data "submit_task.json"
     When Send request submit task
     Then Status code should be 201
     And Response body message should be "success insert submission"

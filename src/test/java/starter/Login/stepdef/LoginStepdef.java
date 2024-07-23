@@ -76,4 +76,11 @@ public class LoginStepdef {
     public void responseBodyDataShouldBeToken(String name) {
         SerenityRest.and().body("message",equalTo(name));
     }
+
+    @And("Response body name login should be {string}")
+    public void responseBodyNameAdminShouldBe(String name) {
+        SerenityRest.and().body("data.name",equalTo(name));
+    }
+
+
 }
