@@ -6,6 +6,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
 import starter.Login.LoginAPI;
 import starter.utils.Constants;
 
@@ -20,11 +21,13 @@ public class MentorAPI {
     public static String DELETE_TASK = Constants.BASE_URL+ "/mentors/tasks/{id_task}";
     public static String POST_SCORE = Constants.BASE_URL+ "/mentors/submission/{id_submission}";
     public static String POST_COMMENT = Constants.BASE_URL+ "/forum/{id_status}";
+    @Steps
     LoginAPI loginAPI;
+    
     @Step ("Get all task")
     public void getAllTask(){
         SerenityRest.given()
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
 
     @Step ("Update user")
@@ -35,7 +38,7 @@ public class MentorAPI {
                 .multiPart("password", password)
                 .multiPart("images", new File(Constants.DIR + "/src/docs/" + imageFile))
                 .header("Content-Type", "multipart/form-data")
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
 
     @Step ("Update user invalid data type file")
@@ -46,7 +49,7 @@ public class MentorAPI {
                 .multiPart("password", new File(Constants.DIR + "/src/docs/" + imageFile))
                 .multiPart("images", new File(Constants.DIR + "/src/docs/" + imageFile))
                 .header("Content-Type", "multipart/form-data")
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
 
     @Step ("Update user invalid data name")
@@ -57,7 +60,7 @@ public class MentorAPI {
                 .multiPart("kata_sandi", password)
                 .multiPart("gambar", new File(Constants.DIR + "/src/docs/" + imageFile))
                 .header("Content-Type", "multipart/form-data")
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
 
     @Step ("Add task")
@@ -69,7 +72,7 @@ public class MentorAPI {
                 .multiPart("file", new File(Constants.DIR + "/src/docs/" + file))
                 .multiPart("due_date", date)
                 .header("Content-Type", "multipart/form-data")
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
     @Step ("Add task invalid data type file")
     public void addTaskinvalid(String images){
@@ -80,7 +83,7 @@ public class MentorAPI {
                 .multiPart("file", new File(Constants.DIR + "/src/docs/" + images))
                 .multiPart("due_date", new File(Constants.DIR + "/src/docs/" + images))
                 .header("Content-Type", "multipart/form-data")
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
     @Step ("Add task invalid data name")
     public void addTaskinvalidName(String title, String description, String images, String file, String date){
@@ -91,7 +94,7 @@ public class MentorAPI {
                 .multiPart("file", new File(Constants.DIR + "/src/docs/" + file))
                 .multiPart("tanggal", date)
                 .header("Content-Type", "multipart/form-data")
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
 
     }
 
@@ -100,7 +103,7 @@ public class MentorAPI {
     public void getDetailTask(int id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
 
     }
 
@@ -110,7 +113,7 @@ public class MentorAPI {
                 .pathParam("id_task", id_task)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
 
     }
 
@@ -118,14 +121,14 @@ public class MentorAPI {
     public void deleteTask(int id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
 
     @Step ("Delete a task invalid string")
     public void deleteTaskInvalid(String id_task){
         SerenityRest.given()
                 .pathParam("id_task", id_task)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
 
     }
 
@@ -135,7 +138,7 @@ public class MentorAPI {
                 .pathParam("id_submission", id_submission)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
     @Step ("Submit Score invalid string")
     public void submitScoreInvalid (String id_submission, File json){
@@ -143,7 +146,7 @@ public class MentorAPI {
                 .pathParam("id_submission", id_submission)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
 
     @Step ("Comment Status")
@@ -152,7 +155,7 @@ public class MentorAPI {
                 .pathParam("id_status", id_status)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
     }
 
     @Step ("Comment Status")
@@ -161,7 +164,7 @@ public class MentorAPI {
                 .pathParam("id_status", id_status)
                 .contentType(ContentType.JSON)
                 .body(json)
-                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_MENTOR);
 
     }
 

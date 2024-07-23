@@ -1,9 +1,9 @@
 Feature: Delete task by mentor
   Scenario: Delete task with valid id
-    Given Delete task with valid id 3
+    Given Delete task with valid id 24
     When Send request delete task
     Then Status code should be 201
-    And Response body message should be "Delete success"
+    And Response body message should be "Delete Success"
     And Validate json schema should be "delete_task_schema.json"
 
   Scenario: Delete task with not exist id
