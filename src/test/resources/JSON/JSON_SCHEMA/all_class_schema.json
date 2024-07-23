@@ -1,0 +1,225 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_class": {
+              "type": "integer"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "total_student": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id_class",
+            "class_name",
+            "status",
+            "total_student"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}

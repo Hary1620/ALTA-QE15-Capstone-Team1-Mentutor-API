@@ -19,4 +19,9 @@ public class DeleteUser {
     public void sendRequestDeleteUser() {
         SerenityRest.when().delete(Admin.USERS_WITH_ID);
     }
+
+    @Given("Delete user with Special id {string}")
+    public void deleteUserWithSpecialId(String id) {
+        admin.DeleteUserSpecialID(id);
+    }
 }

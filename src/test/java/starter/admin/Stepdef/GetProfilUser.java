@@ -10,8 +10,8 @@ public class GetProfilUser {
     @Steps
     Admin admin;
 
-    @Given("Get profil user with valid param {int}")
-    public void getProfilUserWithValidParamUserID(int UserID) {
+    @Given("Get profil user with valid id {int}")
+    public void getProfilUserWithValidIdUserID(int UserID) {
         admin.getProfilOtherUser(UserID);
 
     }
@@ -19,5 +19,10 @@ public class GetProfilUser {
     @When("send request get profil user")
     public void sendRequestGetProfilUser() {
         SerenityRest.when().get(Admin.USERS_WITH_ID);
+    }
+
+    @Given("get profil user with invalid id {string}")
+    public void getProfilUserWithInvalidId(String UserId) {
+        admin.getProfilOtherUserInvalidID(UserId);
     }
 }
