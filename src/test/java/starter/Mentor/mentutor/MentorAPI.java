@@ -6,11 +6,13 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import starter.Login.LoginAPI;
 import starter.utils.Constants;
 
 import java.io.File;
 
 public class MentorAPI {
+
     public static String LOGIN_MENTOR = Constants.BASE_URL +"/login";
     public static String UPDATE_USERS = Constants.BASE_URL+ "/users";
     public static String ADD_TASK = Constants.BASE_URL+ "/mentors/tasks";
@@ -21,12 +23,10 @@ public class MentorAPI {
     public static String POST_SCORE = Constants.BASE_URL+ "/mentors/submission/{id_submission}";
     public static String POST_COMMENT = Constants.BASE_URL+ "/forum/{id_status}";
 
-    public static String TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZENsYXNzIjoxLCJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MjE2NjI2MzQsInJvbGUiOiJtZW50b3IiLCJ1c2VySWQiOjN9.AOtWlwQioZ13dDIlg_c06OS6ACBQcEh8OboolYFG2UE";
-
     @Step ("Get all task")
     public void getAllTask(){
         SerenityRest.given()
-                .header("Authorization", "Bearer " + TOKEN);
+                .header("Authorization", "Bearer " + LoginAPI.getTokenMentor());
     }
 
     @Step ("Update user")
@@ -94,6 +94,7 @@ public class MentorAPI {
                 .multiPart("tanggal", date)
                 .header("Content-Type", "multipart/form-data")
                 .header("Authorization", "Bearer " + TOKEN);
+
     }
 
 
@@ -102,6 +103,7 @@ public class MentorAPI {
         SerenityRest.given()
                 .pathParam("id_task", id_task)
                 .header("Authorization", "Bearer " + TOKEN);
+
     }
 
     @Step ("Update task")
@@ -111,6 +113,7 @@ public class MentorAPI {
                 .contentType(ContentType.JSON)
                 .body(json)
                 .header("Authorization", "Bearer " + TOKEN);
+
     }
 
     @Step ("Delete a task")
@@ -125,6 +128,7 @@ public class MentorAPI {
         SerenityRest.given()
                 .pathParam("id_task", id_task)
                 .header("Authorization", "Bearer " + TOKEN);
+
     }
 
     @Step ("Submit Score")
@@ -160,6 +164,7 @@ public class MentorAPI {
                 .contentType(ContentType.JSON)
                 .body(json)
                 .header("Authorization", "Bearer " + TOKEN);
+
     }
 
     @Step ("validate json schema")
