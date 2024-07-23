@@ -1,9 +1,38 @@
-# Getting started with REST API testing with Serenity and Cucumber 6
+# ALTA Capstone Project Team-1 Mentutor API
 
-This is a simple starter project for Serenity with Cucumber 6 and RestAssured
+## Overview
+This project is a Serenity-based API testing framework written in Java. It uses Maven for build automation and dependency management, and Cucumber for writing test scenarios in a readable BDD (Behavior Driven Development) format. Postman is used for manual testing environment.
 
-## Want to learn more?
-For more information about Serenity BDD, you can read the [**Serenity BDD Book**](https://serenity-bdd.github.io/theserenitybook/latest/index.html), the official online Serenity documentation source. Other sources include:
-* **[Byte-sized Serenity BDD](https://www.youtube.com/channel/UCav6-dPEUiLbnu-rgpy7_bw/featured)** - tips and tricks about Serenity BDD
-* [**Serenity BDD Blog**](https://johnfergusonsmart.com/category/serenity-bdd/) - regular articles about Serenity BDD
-* [**The Serenity Dojo**](https://www.serenity-dojo.com) - Tailored BDD and Test Automation Training and Mentoring
+## This is project for testing mentutor API includes:
+* Using manual and automation as ways of testing.
+* Positive and Neagtive test cases for several scenario.
+* Using several methodes: GET, POST, PUT, and DELETE.
+
+## Manual test case spreadsheet
+* **[Spreadsheet](https://docs.google.com/spreadsheets/d/1CZlQqHCEjIea0I-8XUVbv9Tx9gy4rwYh89RvZVFnmp0/edit?gid=1980146847#gid=1980146847)**
+
+## Overall test report
+
+## Feature coverage
+
+## Tools and Technologies
+- **Java 1.8**: The programming language used for writing the test scripts.
+- **Maven**: Build automation tool used for managing project dependencies and running tests.
+- **IntelliJ IDEA**: Integrated Development Environment (IDE) used for development.
+- **Cucumber for Java**: Plugin for IntelliJ IDEA that supports Cucumber, enabling BDD testing with Gherkin syntax.
+- **Trello**: Project management tool used for managing task, workflow, and project.
+- **Google Spreadsheet**: Computer application for creating and managing data in tabular form used for creating manual test case documentation.
+- **Postman**: API platform for used for testing API.
+- **Zoom** and **Google Meet**: Communications platform used for communicating with mentor and team member.
+
+## Running the test
+* To run the tests, use the Maven command:
+```shell
+mvn clean verify
+```
+
+## Project Contributors
+For the contributors of this project, please visit:
+* [Hary](https://github.com/Hary1620)
+* [Rizki](https://github.com/rzkimdn)
+* [Tonaas](https://github.com/TonaasKalesaran)
