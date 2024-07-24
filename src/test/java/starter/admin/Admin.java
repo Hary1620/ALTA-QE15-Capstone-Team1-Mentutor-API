@@ -36,6 +36,13 @@ LoginAPI loginAPI;
                     .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN);
         }
 
+    @Step ("Get Profil Other User with invali id")
+    public void getProfilOtherUserInvalidID(String userId) {
+        SerenityRest.given()
+                .pathParam("userId", userId)
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN);
+    }
+
     @Step("Register New User of Mentee")
     public void postRegisterNewUser(File json) {
         SerenityRest.given()
@@ -64,9 +71,17 @@ LoginAPI loginAPI;
                 .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN);
     }
 
+    @Step("Put update class special character id")
+    public void putUpdateClassSpecialID(String Id, File json) {
+        SerenityRest.given().pathParam("classId", Id)
+                .contentType(ContentType.JSON).body(json)
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN);
+    }
+
     @Step ("Delete a Class")
     public void DeleteClass(int id){
-        SerenityRest.given().pathParam("classId",id);
+        SerenityRest.given().pathParam("classId",id)
+        .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN);
     }
 
     @Step ("Delete a Class special character id")
@@ -76,7 +91,14 @@ LoginAPI loginAPI;
 
     @Step ("Delete a user of mentee")
     public void DeleteUser(int id){
-        SerenityRest.given().pathParam("userId",id);
+        SerenityRest.given().pathParam("userId",id)
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN);
+    }
+
+    @Step ("Delete a user of mentee")
+    public void DeleteUserSpecialID(String id){
+        SerenityRest.given().pathParam("userId",id)
+                .header("Authorization", "Bearer " + loginAPI.TOKEN_ADMIN);
     }
 
     @Step ("Delete a user special character id")

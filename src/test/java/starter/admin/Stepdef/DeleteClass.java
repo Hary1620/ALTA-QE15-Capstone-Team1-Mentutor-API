@@ -19,4 +19,9 @@ public class DeleteClass {
     public void sendRequestDeleteClass() {
         SerenityRest.when().delete(Admin.CLASSES_WITH_ID);
     }
+
+    @Given("Delete class with id {string}")
+    public void deleteClassWithId(String id) {
+        admin.DeleteClassSpecialId(id);
+    }
 }

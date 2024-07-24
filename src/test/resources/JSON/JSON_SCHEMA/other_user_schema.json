@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id_user": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "class_name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "images": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id_user",
+        "name",
+        "email",
+        "class_name",
+        "role",
+        "images"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}

@@ -13,7 +13,7 @@ public class UpdateClass {
     @Steps
     Admin admin;
 
-    @Given("Update class with parameter class id {int} and valid json {string}.")
+    @Given("Update class with parameter class id {int} and valid json {string}")
     public void updateClassWithParameterClassIdAndValidJson(int classID, String FileName) {
         File jsonFile = new File(Constants.REQ_BODY+FileName);
         admin.putUpdateClass(classID,jsonFile);
@@ -23,5 +23,11 @@ public class UpdateClass {
     @When("Send Request put update class")
     public void sendRequestPutUpdateClass() {
         SerenityRest.when().put(Admin.CLASSES_WITH_ID);
+    }
+
+    @Given("Update class with parameter class id {string} and valid json {string}")
+    public void updateClassWithParameterClassIdAndValidJson(String Id, String file) {
+        File jsonFile = new File(Constants.REQ_BODY+file);
+        admin.putUpdateClassSpecialID(Id,jsonFile);
     }
 }

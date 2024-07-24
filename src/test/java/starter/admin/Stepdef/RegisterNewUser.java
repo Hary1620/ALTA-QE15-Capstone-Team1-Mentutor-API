@@ -23,4 +23,10 @@ public class RegisterNewUser {
     public void sendRequestPostRegisterNewUser() {
         SerenityRest.when().post(Admin.ALL_USERS);
     }
+
+    @Given("register new user with invalid json {string}")
+    public void registerNewUserWithInvalidJson(String file) {
+        File fileJson = new File(Constants.REQ_BODY+file);
+        admin.postRegisterNewUser(fileJson);
+    }
 }
