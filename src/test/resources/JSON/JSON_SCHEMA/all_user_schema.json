@@ -1,0 +1,396 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_user": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_user",
+            "name",
+            "email",
+            "role",
+            "class_name"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}

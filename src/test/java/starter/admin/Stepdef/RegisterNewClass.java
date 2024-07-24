@@ -23,4 +23,10 @@ public class RegisterNewClass {
     public void sendRequestPostRegisterNewClass() {
         SerenityRest.when().post(Admin.ALL_CLASSES);
     }
+
+    @Given("register new class with invalid json {string}")
+    public void reggisterNewClassWithInvalidJson(String fileName) {
+        File fileJson = new File(Constants.REQ_BODY+fileName);
+        admin.postRegisterNewClass(fileJson);
+    }
 }
