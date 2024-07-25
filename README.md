@@ -6,7 +6,7 @@ This project is a Serenity-based API testing framework written in Java. It uses 
 ## This is project for testing mentutor API includes:
 * Using manual and automation as ways of testing.
 * Positive and Neagtive test cases for several scenario.
-* Using several methodes: GET, POST, PUT, and DELETE.
+* Using several methods: GET, POST, PUT, and DELETE.
 
 ## Manual test case spreadsheet
 * **[Spreadsheet](https://docs.google.com/spreadsheets/d/1CZlQqHCEjIea0I-8XUVbv9Tx9gy4rwYh89RvZVFnmp0/edit?gid=1980146847#gid=1980146847)**
